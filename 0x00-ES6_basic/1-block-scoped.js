@@ -3,9 +3,9 @@ export default function taskBlock(trueOrFalse) {
   let task2 = true;
 
   if (trueOrFalse) {
-    let task = true;  // Scoped only within the if block
-    let task2 = false; // Scoped only within the if block
+    const task = true;  // Scoped only within the if block
+    const task2 = false; // Scoped only within the if block
   }
 
-  return [task, task2];
+  return [task, task2]; // The outer task and task2 are returned
 }
