@@ -1,4 +1,4 @@
-import Car from './10-car.js';
+import Car from './10-car';
 
 const _range = Symbol('range');
 
@@ -6,7 +6,7 @@ class EVCar extends Car {
   constructor(brand, motor, color, range) {
     // Call the parent class constructor
     super(brand, motor, color);
-    
+
     // Verify that range is a string
     if (typeof range !== 'string') {
       throw new TypeError('range must be a string');

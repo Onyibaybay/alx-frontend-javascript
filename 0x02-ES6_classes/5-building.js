@@ -15,7 +15,7 @@ class Building {
   }
 
   // Abstract method to be implemented by subclasses
-  evacuationWarningMessage() {
+ this. evacuationWarningMessage() {
     throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
