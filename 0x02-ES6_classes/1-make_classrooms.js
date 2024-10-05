@@ -1,0 +1,10 @@
+// Assuming 0-classroom.js is in the same directory
+import ClassRoom from './0-classroom.js';
+
+export function initializeRooms() {
+  return [
+    new ClassRoom(19),
+    new ClassRoom(20),
+    new ClassRoom(34)
+  ];
+}
