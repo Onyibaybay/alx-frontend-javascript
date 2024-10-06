@@ -11,3 +11,8 @@ signUpUser('John', 'Doe')
   .then((user) => {
     console.log(user); // Logs: { firstName: 'John', lastName: 'Doe' }
   });
+
+signUpUser('Alice', 'Smith')
+  .then((user) => {
+    console.log(user); // Logs: { firstName: 'Alice', lastName: 'Smith' }
+  });
