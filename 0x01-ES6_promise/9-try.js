@@ -1,23 +1,16 @@
-export default function guardrail(mathFunction) {
-  const queue = []; // Initialize the queue
+/**
+ *
+ * @param {Function} mathFunction
+ */
+export default function quardrail(mathFunction) {
+  const queue = [];
 
   try {
-    const result = mathFunction(); // Execute the mathFunction
-    queue.push(result); // Append the result to the queue if successful
-  } catch (error) {
-    queue.push(error.message); // Append the error message if an error is thrown
+    queue.push(mathFunction());
+  } catch (err) {
+    queue.push(err.toString());
   } finally {
-    queue.push('Guardrail was processed'); // Always add this message
+    queue.push('Guardrail was processed');
   }
-
-  return queue; // Return the completed queue
+  return queue;
 }
-
-// Example usage
-const result1 = guardrail(() => 1000);
-console.log(result1); // Expected output: [1000, 'Guardrail was processed']
-
-const result2 = guardrail(() => {
-  throw new Error('Something went wrong');
-});
-console.log(result2); // Expected output: ['Something went wrong', 'Guardrail was processed']
