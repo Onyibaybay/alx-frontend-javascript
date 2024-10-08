@@ -1,4 +1,6 @@
-ram {Set<T>} set
+/**
+ *
+ * @param {Set<T>} set
  * @param {T[]} array
  */
 export default function hasValuesFromArray(set, array) {
